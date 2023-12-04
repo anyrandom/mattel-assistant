@@ -12,10 +12,10 @@ st.sidebar.title("Welcome to the Mattel AI Assistant")
 st.sidebar.divider()
 #st.sidebar.subheader("Let me help you find the perfect beverage today!")
 
-openai.api_type = "azure"
-openai.api_base = "https://testaisvc.openai.azure.com/"
-openai.api_version = "2023-03-15-preview"
-openai.api_key = "1164d7a0490a41b9b6ec3a32d4c77b5a"
+openai.api_type = st.secrets["TYPE"]
+openai.api_base = st.secrets["BASE"]
+openai.api_version = st.secrets["VERSION"]
+openai.api_key = st.secrets["KEY"]
 
 
 conversation = [
